@@ -91,6 +91,7 @@ class VolumeVisualizer:
         """Update the display for a given slice index, taking into account the current rotation."""
         self.ax.clear()
         im = self.rotated_volume[:, :, slice_idx - 1]
+       
         self.ax.imshow(im, cmap=self.cmap, vmin=self.coloraxis[0] if self.coloraxis else 0,
                        vmax=self.coloraxis[1] if self.coloraxis else 1000)
         self.ax.set_title(f'Slice {slice_idx} (Rotated {self.rotation_angle} degrees)')

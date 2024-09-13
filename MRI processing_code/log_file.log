@@ -4268,3 +4268,217 @@ srow_z          : [   0.         0.         1.      -309.40198]
 intent_name     : np.bytes_(b'')
 magic           : np.bytes_(b'n+1')
 
+2024-09-11 22:02:37,823 - root - INFO - This is my CHECK message 
+2024-09-11 22:02:37,824 - root - WARNING - This is my WARNING message 
+2024-09-11 22:02:37,824 - root - ERROR - This is my ERROR message 
+2024-09-11 22:02:37,825 - root - CRITICAL - This is my FAULT message 
+2024-09-11 22:02:38,399 - root - INFO - D:\Image_Processing_Demo\sample_data\MRI_data\resampled\volumes\349081_AXIAL_HASTE_resampled.nii.gz
+2024-09-11 22:02:38,400 - root - INFO - Resampling D:\Image_Processing_Demo\sample_data\MRI_data\volumes\349081_AXIAL_HASTE.nii.gz...
+2024-09-11 22:02:38,447 - root - INFO - OG Size: (320, 240, 95)
+2024-09-11 22:02:38,447 - root - INFO - OG Space: (1.1875, 1.1875, 4.0)
+2024-09-11 22:02:38,525 - root - INFO - resampled_size: (380, 285, 380)
+2024-09-11 22:02:38,525 - root - INFO - resampled_spacing: (1.0, 1.0, 1.0)
+2024-09-11 22:02:39,925 - root - INFO - Saved to D:\Image_Processing_Demo\sample_data\MRI_data\resampled\volumes\349081_AXIAL_HASTE_resampled.nii.gz
+2024-09-11 22:02:39,932 - root - INFO - D:\Image_Processing_Demo\sample_data\MRI_data\resampled\labels\349081_AX-HASTE-ng-label_resampled.nii.gz
+2024-09-11 22:02:39,932 - root - INFO - Resampling D:\Image_Processing_Demo\sample_data\MRI_data\labels\349081_AX-HASTE-ng-label.nii.gz...
+2024-09-11 22:02:39,946 - root - INFO - OG Size: (320, 240, 95)
+2024-09-11 22:02:39,947 - root - INFO - OG Space: (1.1875, 1.1875, 4.0)
+2024-09-11 22:02:39,985 - root - INFO - resampled_size: (380, 285, 380)
+2024-09-11 22:02:39,986 - root - INFO - resampled_spacing: (1.0, 1.0, 1.0)
+2024-09-11 22:02:40,009 - root - INFO - Saved to D:\Image_Processing_Demo\sample_data\MRI_data\resampled\labels\349081_AX-HASTE-ng-label_resampled.nii.gz
+2024-09-11 22:02:40,017 - root - INFO - D:\Image_Processing_Demo\sample_data\MRI_data\resampled\volumes\349101_AXIAL_HASTE_resampled.nii.gz
+2024-09-11 22:02:40,018 - root - INFO - Resampling D:\Image_Processing_Demo\sample_data\MRI_data\volumes\349101_AXIAL_HASTE.nii.gz...
+2024-09-11 22:02:40,057 - root - INFO - OG Size: (256, 232, 90)
+2024-09-11 22:02:40,058 - root - INFO - OG Space: (1.09375, 1.09375, 4.0)
+2024-09-11 22:02:40,111 - root - INFO - resampled_size: (280, 254, 360)
+2024-09-11 22:02:40,112 - root - INFO - resampled_spacing: (1.0, 1.0, 1.0)
+2024-09-11 22:02:41,032 - root - INFO - Saved to D:\Image_Processing_Demo\sample_data\MRI_data\resampled\volumes\349101_AXIAL_HASTE_resampled.nii.gz
+2024-09-11 22:02:41,037 - root - INFO - D:\Image_Processing_Demo\sample_data\MRI_data\resampled\labels\349101_AX-HASTE-ng-label_resampled.nii.gz
+2024-09-11 22:02:41,038 - root - INFO - Resampling D:\Image_Processing_Demo\sample_data\MRI_data\labels\349101_AX-HASTE-ng-label.nii.gz...
+2024-09-11 22:02:41,048 - root - INFO - OG Size: (256, 232, 90)
+2024-09-11 22:02:41,049 - root - INFO - OG Space: (1.09375, 1.09375, 4.0)
+2024-09-11 22:02:41,075 - root - INFO - resampled_size: (280, 254, 360)
+2024-09-11 22:02:41,076 - root - INFO - resampled_spacing: (1.0, 1.0, 1.0)
+2024-09-11 22:02:41,092 - root - INFO - Saved to D:\Image_Processing_Demo\sample_data\MRI_data\resampled\labels\349101_AX-HASTE-ng-label_resampled.nii.gz
+2024-09-11 22:02:41,099 - root - INFO - D:\Image_Processing_Demo\sample_data\MRI_data\resampled\volumes\349102_AXIAL_HASTE_resampled.nii.gz
+2024-09-11 22:02:41,099 - root - INFO - Resampling D:\Image_Processing_Demo\sample_data\MRI_data\volumes\349102_AXIAL_HASTE.nii.gz...
+2024-09-11 22:02:41,155 - root - INFO - OG Size: (320, 256, 100)
+2024-09-11 22:02:41,156 - root - INFO - OG Space: (1.03125, 1.03125, 4.0)
+2024-09-11 22:02:41,220 - root - INFO - resampled_size: (330, 264, 400)
+2024-09-11 22:02:41,222 - root - INFO - resampled_spacing: (1.0, 1.0, 1.0)
+2024-09-11 22:02:42,429 - root - INFO - Saved to D:\Image_Processing_Demo\sample_data\MRI_data\resampled\volumes\349102_AXIAL_HASTE_resampled.nii.gz
+2024-09-11 22:02:42,436 - root - INFO - D:\Image_Processing_Demo\sample_data\MRI_data\resampled\labels\349102_AX-HASTE-ng-label_resampled.nii.gz
+2024-09-11 22:02:42,437 - root - INFO - Resampling D:\Image_Processing_Demo\sample_data\MRI_data\labels\349102_AX-HASTE-ng-label.nii.gz...
+2024-09-11 22:02:42,467 - root - INFO - OG Size: (320, 256, 100)
+2024-09-11 22:02:42,468 - root - INFO - OG Space: (1.03125, 1.03125, 4.0)
+2024-09-11 22:02:42,499 - root - INFO - resampled_size: (330, 264, 400)
+2024-09-11 22:02:42,500 - root - INFO - resampled_spacing: (1.0, 1.0, 1.0)
+2024-09-11 22:02:42,526 - root - INFO - Saved to D:\Image_Processing_Demo\sample_data\MRI_data\resampled\labels\349102_AX-HASTE-ng-label_resampled.nii.gz
+2024-09-11 22:02:43,059 - root - INFO - 
+<class 'nibabel.nifti1.Nifti1Image'>
+data shape (330, 264, 400)
+affine:
+[[  -1.           -0.            0.          154.0418396 ]
+ [  -0.            1.           -0.         -126.8928833 ]
+ [   0.            0.            1.         -309.40197754]
+ [   0.            0.            0.            1.        ]]
+metadata:
+<class 'nibabel.nifti1.Nifti1Header'> object, endian='<'
+sizeof_hdr      : 348
+data_type       : np.bytes_(b'')
+db_name         : np.bytes_(b'')
+extents         : 0
+session_error   : 0
+regular         : np.bytes_(b'r')
+dim_info        : 0
+dim             : [  3 330 264 400   1   1   1   1]
+intent_p1       : 0.0
+intent_p2       : 0.0
+intent_p3       : 0.0
+intent_code     : none
+datatype        : int16
+bitpix          : 16
+slice_start     : 0
+pixdim          : [-1.  1.  1.  1.  0.  0.  0.  0.]
+vox_offset      : 0.0
+scl_slope       : nan
+scl_inter       : nan
+slice_end       : 0
+slice_code      : unknown
+xyzt_units      : 10
+cal_max         : 0.0
+cal_min         : 0.0
+slice_duration  : 0.0
+toffset         : 0.0
+glmax           : 0
+glmin           : 0
+descrip         : np.bytes_(b'')
+aux_file        : np.bytes_(b'')
+qform_code      : scanner
+sform_code      : scanner
+quatern_b       : -0.0
+quatern_c       : 1.0
+quatern_d       : 0.0
+qoffset_x       : 154.04184
+qoffset_y       : -126.89288
+qoffset_z       : -309.40198
+srow_x          : [ -1.       -0.        0.      154.04184]
+srow_y          : [  -0.         1.        -0.      -126.89288]
+srow_z          : [   0.         0.         1.      -309.40198]
+intent_name     : np.bytes_(b'')
+magic           : np.bytes_(b'n+1')
+
+2024-09-11 22:02:43,706 - root - INFO - Loading input image from D:\Image_Processing_Demo\sample_data\MRI_data\resampled\volumes\349081_AXIAL_HASTE_resampled.nii.gz...
+2024-09-11 22:02:43,982 - root - INFO - Applying shrink factor of 4 before thresholding...
+2024-09-11 22:02:43,999 - root - INFO - Creating mask using Li thresholding...
+2024-09-11 22:02:44,021 - root - INFO - Performing N4ITK Bias Field Correction...
+2024-09-11 22:03:01,833 - root - INFO - This is my CHECK message 
+2024-09-11 22:03:01,834 - root - WARNING - This is my WARNING message 
+2024-09-11 22:03:01,835 - root - ERROR - This is my ERROR message 
+2024-09-11 22:03:01,835 - root - CRITICAL - This is my FAULT message 
+2024-09-11 22:03:02,387 - root - INFO - D:\Image_Processing_Demo\sample_data\MRI_data\resampled\volumes\349081_AXIAL_HASTE_resampled.nii.gz
+2024-09-11 22:03:02,387 - root - INFO - Resampling D:\Image_Processing_Demo\sample_data\MRI_data\volumes\349081_AXIAL_HASTE.nii.gz...
+2024-09-11 22:03:02,439 - root - INFO - OG Size: (320, 240, 95)
+2024-09-11 22:03:02,440 - root - INFO - OG Space: (1.1875, 1.1875, 4.0)
+2024-09-11 22:03:02,516 - root - INFO - resampled_size: (380, 285, 380)
+2024-09-11 22:03:02,517 - root - INFO - resampled_spacing: (1.0, 1.0, 1.0)
+2024-09-11 22:03:03,933 - root - INFO - Saved to D:\Image_Processing_Demo\sample_data\MRI_data\resampled\volumes\349081_AXIAL_HASTE_resampled.nii.gz
+2024-09-11 22:03:03,939 - root - INFO - D:\Image_Processing_Demo\sample_data\MRI_data\resampled\labels\349081_AX-HASTE-ng-label_resampled.nii.gz
+2024-09-11 22:03:03,940 - root - INFO - Resampling D:\Image_Processing_Demo\sample_data\MRI_data\labels\349081_AX-HASTE-ng-label.nii.gz...
+2024-09-11 22:03:03,951 - root - INFO - OG Size: (320, 240, 95)
+2024-09-11 22:03:03,952 - root - INFO - OG Space: (1.1875, 1.1875, 4.0)
+2024-09-11 22:03:03,990 - root - INFO - resampled_size: (380, 285, 380)
+2024-09-11 22:03:03,990 - root - INFO - resampled_spacing: (1.0, 1.0, 1.0)
+2024-09-11 22:03:04,016 - root - INFO - Saved to D:\Image_Processing_Demo\sample_data\MRI_data\resampled\labels\349081_AX-HASTE-ng-label_resampled.nii.gz
+2024-09-11 22:03:04,024 - root - INFO - D:\Image_Processing_Demo\sample_data\MRI_data\resampled\volumes\349101_AXIAL_HASTE_resampled.nii.gz
+2024-09-11 22:03:04,025 - root - INFO - Resampling D:\Image_Processing_Demo\sample_data\MRI_data\volumes\349101_AXIAL_HASTE.nii.gz...
+2024-09-11 22:03:04,062 - root - INFO - OG Size: (256, 232, 90)
+2024-09-11 22:03:04,063 - root - INFO - OG Space: (1.09375, 1.09375, 4.0)
+2024-09-11 22:03:04,113 - root - INFO - resampled_size: (280, 254, 360)
+2024-09-11 22:03:04,114 - root - INFO - resampled_spacing: (1.0, 1.0, 1.0)
+2024-09-11 22:03:04,975 - root - INFO - Saved to D:\Image_Processing_Demo\sample_data\MRI_data\resampled\volumes\349101_AXIAL_HASTE_resampled.nii.gz
+2024-09-11 22:03:04,981 - root - INFO - D:\Image_Processing_Demo\sample_data\MRI_data\resampled\labels\349101_AX-HASTE-ng-label_resampled.nii.gz
+2024-09-11 22:03:04,981 - root - INFO - Resampling D:\Image_Processing_Demo\sample_data\MRI_data\labels\349101_AX-HASTE-ng-label.nii.gz...
+2024-09-11 22:03:04,990 - root - INFO - OG Size: (256, 232, 90)
+2024-09-11 22:03:04,992 - root - INFO - OG Space: (1.09375, 1.09375, 4.0)
+2024-09-11 22:03:05,018 - root - INFO - resampled_size: (280, 254, 360)
+2024-09-11 22:03:05,019 - root - INFO - resampled_spacing: (1.0, 1.0, 1.0)
+2024-09-11 22:03:05,034 - root - INFO - Saved to D:\Image_Processing_Demo\sample_data\MRI_data\resampled\labels\349101_AX-HASTE-ng-label_resampled.nii.gz
+2024-09-11 22:03:05,039 - root - INFO - D:\Image_Processing_Demo\sample_data\MRI_data\resampled\volumes\349102_AXIAL_HASTE_resampled.nii.gz
+2024-09-11 22:03:05,041 - root - INFO - Resampling D:\Image_Processing_Demo\sample_data\MRI_data\volumes\349102_AXIAL_HASTE.nii.gz...
+2024-09-11 22:03:05,095 - root - INFO - OG Size: (320, 256, 100)
+2024-09-11 22:03:05,096 - root - INFO - OG Space: (1.03125, 1.03125, 4.0)
+2024-09-11 22:03:05,158 - root - INFO - resampled_size: (330, 264, 400)
+2024-09-11 22:03:05,159 - root - INFO - resampled_spacing: (1.0, 1.0, 1.0)
+2024-09-11 22:03:06,307 - root - INFO - Saved to D:\Image_Processing_Demo\sample_data\MRI_data\resampled\volumes\349102_AXIAL_HASTE_resampled.nii.gz
+2024-09-11 22:03:06,313 - root - INFO - D:\Image_Processing_Demo\sample_data\MRI_data\resampled\labels\349102_AX-HASTE-ng-label_resampled.nii.gz
+2024-09-11 22:03:06,314 - root - INFO - Resampling D:\Image_Processing_Demo\sample_data\MRI_data\labels\349102_AX-HASTE-ng-label.nii.gz...
+2024-09-11 22:03:06,326 - root - INFO - OG Size: (320, 256, 100)
+2024-09-11 22:03:06,326 - root - INFO - OG Space: (1.03125, 1.03125, 4.0)
+2024-09-11 22:03:06,358 - root - INFO - resampled_size: (330, 264, 400)
+2024-09-11 22:03:06,359 - root - INFO - resampled_spacing: (1.0, 1.0, 1.0)
+2024-09-11 22:03:06,377 - root - INFO - Saved to D:\Image_Processing_Demo\sample_data\MRI_data\resampled\labels\349102_AX-HASTE-ng-label_resampled.nii.gz
+2024-09-11 22:03:06,883 - root - INFO - 
+<class 'nibabel.nifti1.Nifti1Image'>
+data shape (330, 264, 400)
+affine:
+[[  -1.           -0.            0.          154.0418396 ]
+ [  -0.            1.           -0.         -126.8928833 ]
+ [   0.            0.            1.         -309.40197754]
+ [   0.            0.            0.            1.        ]]
+metadata:
+<class 'nibabel.nifti1.Nifti1Header'> object, endian='<'
+sizeof_hdr      : 348
+data_type       : np.bytes_(b'')
+db_name         : np.bytes_(b'')
+extents         : 0
+session_error   : 0
+regular         : np.bytes_(b'r')
+dim_info        : 0
+dim             : [  3 330 264 400   1   1   1   1]
+intent_p1       : 0.0
+intent_p2       : 0.0
+intent_p3       : 0.0
+intent_code     : none
+datatype        : int16
+bitpix          : 16
+slice_start     : 0
+pixdim          : [-1.  1.  1.  1.  0.  0.  0.  0.]
+vox_offset      : 0.0
+scl_slope       : nan
+scl_inter       : nan
+slice_end       : 0
+slice_code      : unknown
+xyzt_units      : 10
+cal_max         : 0.0
+cal_min         : 0.0
+slice_duration  : 0.0
+toffset         : 0.0
+glmax           : 0
+glmin           : 0
+descrip         : np.bytes_(b'')
+aux_file        : np.bytes_(b'')
+qform_code      : scanner
+sform_code      : scanner
+quatern_b       : -0.0
+quatern_c       : 1.0
+quatern_d       : 0.0
+qoffset_x       : 154.04184
+qoffset_y       : -126.89288
+qoffset_z       : -309.40198
+srow_x          : [ -1.       -0.        0.      154.04184]
+srow_y          : [  -0.         1.        -0.      -126.89288]
+srow_z          : [   0.         0.         1.      -309.40198]
+intent_name     : np.bytes_(b'')
+magic           : np.bytes_(b'n+1')
+
+2024-09-11 22:03:07,559 - root - INFO - Loading input image from D:\Image_Processing_Demo\sample_data\MRI_data\resampled\volumes\349081_AXIAL_HASTE_resampled.nii.gz...
+2024-09-11 22:03:07,833 - root - INFO - Applying shrink factor of 4 before thresholding...
+2024-09-11 22:03:07,850 - root - INFO - Creating mask using Li thresholding...
+2024-09-11 22:03:07,872 - root - INFO - Performing N4ITK Bias Field Correction...
+2024-09-11 22:03:28,879 - root - INFO - Saving corrected image to D:\Image_Processing_Demo\sample_data\MRI_data\BFC\349081_AXIAL_HASTE_resampled_BF.nii.gz...
+2024-09-11 22:03:28,941 - root - INFO - Bias field correction completed successfully.
+2024-09-11 22:03:28,949 - root - INFO - Loading input image from D:\Image_Processing_Demo\sample_data\MRI_data\resampled\volumes\349101_AXIAL_HASTE_resampled.nii.gz...
+2024-09-11 22:03:29,135 - root - INFO - Applying shrink factor of 4 before thresholding...
+2024-09-11 22:03:29,149 - root - INFO - Creating mask using Li thresholding...
+2024-09-11 22:03:29,169 - root - INFO - Performing N4ITK Bias Field Correction...
