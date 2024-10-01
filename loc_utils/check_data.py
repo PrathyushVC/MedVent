@@ -1,7 +1,16 @@
 import nibabel as nib
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from pathlib import Path
+import scipy.ndimage as ndi
+import SimpleITK as sitk
+import numpy as np
+
+
+
 def find_small_components(lab_files, area_threshold, output_csv,sep='_',loc=0):
-    import scipy.ndimage as ndi
+    
     """
     This function identifies and records small components in 3D label images based on a specified area threshold.
     
@@ -42,7 +51,18 @@ def find_small_components(lab_files, area_threshold, output_csv,sep='_',loc=0):
     df.to_csv(output_csv, index=False)
     print(f'Results written to {output_csv}')
 
-def plot_kde_vols(data):
+def plot_kde_vols(data,save_loc=None):
+  """
+  Plots a Kernel Density Estimate (KDE) for the given data.
+
+  Parameters:y
+  - data: numpy array, the data to be plotted.
+
+  Returns:
+  - None
+
+  This function flattens the input data and plots its KDE using seaborn.
+  """
   data_flat = data.flatten()
   plt.figure(figsize=(8, 6))
   sns.kdeplot(data_flat, bw_adjust=0.5)
@@ -50,10 +70,30 @@ def plot_kde_vols(data):
   plt.xlabel('Data Value')
   plt.ylabel('Density')
   plt.grid(True)
-  plt.show()
+  if save_loc is None:
+      plt.show()
+  else:
+      save_path = Path(save_loc)
+      if save_path.parent.exists():
+          plt.savefig(save_path)
+          print(f"Plot saved to {save_path}")
+      else:
+          raise FileNotFoundError(f"The directory {save_path.parent} does not exist.")
 
 
-def plot_multiple_kde(df):
+def plot_multiple_kde(df,save_loc=None):
+  """
+  Plots Kernel Density Estimates (KDE) for volumes of multiple patients.
+
+  Parameters:
+  - df: pandas DataFrame, containing 'patient_id' and 'Volumes' columns.
+
+  Returns:
+  - None
+
+  This function iterates through each unique patient ID in the DataFrame, loads the corresponding volume data,
+  flattens it, and plots its KDE using seaborn.
+  """
   unique_patient_ids = df['patient_id'].unique()
   plt.figure(figsize=(8, 6))
   plt.title('Data Distribution (KDE)')
@@ -61,11 +101,78 @@ def plot_multiple_kde(df):
   plt.ylabel('Density')
   for patient_id in unique_patient_ids:
       filtered_df = df[df['patient_id'] == patient_id]
-      volume_path =volume_temp= Path(filtered_df['Volumes'].values[0])
+      volume_path = Path(filtered_df['Volumes'].values[0])
 
       volume = nib.load(volume_path).get_fdata()
 
       data_flat = volume.flatten()
       sns.kdeplot(data_flat, bw_adjust=0.5)
       plt.grid(True)
-  plt.show()
+  if save_loc is None:
+      plt.show()
+  else:
+      save_path = Path(save_loc)
+      if save_path.parent.exists():
+          plt.savefig(save_path)
+          print(f"Plot saved to {save_path}")
+      else:
+          raise FileNotFoundError(f"The directory {save_path.parent} does not exist.")
+
+
+def check_meta(image):#SITK supported image
+    """
+    Checks returns meta data.
+
+    Parameters:
+    - image: SimpleITK.Image or str, the input image to check. It can be a SimpleITK image or a path to a DICOM file.
+
+    Returns:
+    - meta_info: dict, a dictionary containing metadata information of the image, including:
+        - Image Size
+        - Image Spacing (voxel size)
+        - Image Origin
+        - Image Direction (orientation)
+        - Pixel ID
+        - Metadata Dictionary
+    """
+    if isinstance(image, sitk.Image):
+        print("Input is a SimpleITK supported image.")
+    elif isinstance(image, str) and image.lower().endswith('.dcm'):
+        print("Input is a DICOM file.")
+        image = sitk.ReadImage(image)
+    else:
+        raise ValueError("Unsupported image format. Please provide a SimpleITK image or a DICOM file.")
+    meta_info = {
+        "Image Size": image.GetSize(),
+        "Image Spacing (voxel size)": image.GetSpacing(),
+        "Image Origin": image.GetOrigin(),
+        "Image Direction (orientation)": image.GetDirection(),
+        "Pixel ID": image.GetPixelIDTypeAsString(),
+        "Metadata Dictionary": {key: image.GetMetaData(key) for key in image.GetMetaDataKeys()}
+    }
+
+    return meta_info
+
+def get_orientation(affine):
+    """
+    Function to provide a rough guess of image orientation based on the affine matrix.
+
+    Parameters:
+    - matrix from .nii affine field:
+
+    Returns:
+    - String indicating the orientation of the image.
+    """
+    # Extract the orientation of each axis from the affine matrix
+    orientation = np.linalg.norm(affine[:3, :3], axis=0)
+    x, y, z = orientation
+
+    # Assuming that if one dimension is significantly larger, it's likely the slice thickness (axial)
+    if np.isclose(x, y) and z > max(x, y):
+        return 'Axial'
+    elif np.isclose(x, z) and y > max(x, z):
+        return 'Sagittal'
+    elif np.isclose(y, z) and x > max(y, z):
+        return 'Coronal'
+    else:
+        return 'Unknown'
