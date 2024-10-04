@@ -4482,3 +4482,235 @@ magic           : np.bytes_(b'n+1')
 2024-09-11 22:03:29,135 - root - INFO - Applying shrink factor of 4 before thresholding...
 2024-09-11 22:03:29,149 - root - INFO - Creating mask using Li thresholding...
 2024-09-11 22:03:29,169 - root - INFO - Performing N4ITK Bias Field Correction...
+2024-10-01 17:33:17,393 - root - INFO - This is my CHECK message 
+2024-10-01 17:33:17,394 - root - WARNING - This is my WARNING message 
+2024-10-01 17:33:17,395 - root - ERROR - This is my ERROR message 
+2024-10-01 17:33:17,395 - root - CRITICAL - This is my FAULT message 
+2024-10-01 17:33:54,208 - root - INFO - 
+<class 'nibabel.nifti1.Nifti1Image'>
+data shape (330, 264, 400)
+affine:
+[[  -1.           -0.            0.          154.0418396 ]
+ [  -0.            1.           -0.         -126.8928833 ]
+ [   0.            0.            1.         -309.40197754]
+ [   0.            0.            0.            1.        ]]
+metadata:
+<class 'nibabel.nifti1.Nifti1Header'> object, endian='<'
+sizeof_hdr      : 348
+data_type       : np.bytes_(b'')
+db_name         : np.bytes_(b'')
+extents         : 0
+session_error   : 0
+regular         : np.bytes_(b'r')
+dim_info        : 0
+dim             : [  3 330 264 400   1   1   1   1]
+intent_p1       : 0.0
+intent_p2       : 0.0
+intent_p3       : 0.0
+intent_code     : none
+datatype        : int16
+bitpix          : 16
+slice_start     : 0
+pixdim          : [-1.  1.  1.  1.  0.  0.  0.  0.]
+vox_offset      : 0.0
+scl_slope       : nan
+scl_inter       : nan
+slice_end       : 0
+slice_code      : unknown
+xyzt_units      : 10
+cal_max         : 0.0
+cal_min         : 0.0
+slice_duration  : 0.0
+toffset         : 0.0
+glmax           : 0
+glmin           : 0
+descrip         : np.bytes_(b'')
+aux_file        : np.bytes_(b'')
+qform_code      : scanner
+sform_code      : scanner
+quatern_b       : -0.0
+quatern_c       : 1.0
+quatern_d       : 0.0
+qoffset_x       : 154.04184
+qoffset_y       : -126.89288
+qoffset_z       : -309.40198
+srow_x          : [ -1.       -0.        0.      154.04184]
+srow_y          : [  -0.         1.        -0.      -126.89288]
+srow_z          : [   0.         0.         1.      -309.40198]
+intent_name     : np.bytes_(b'')
+magic           : np.bytes_(b'n+1')
+
+2024-10-01 17:36:48,463 - root - INFO - This is my CHECK message 
+2024-10-01 17:36:48,464 - root - WARNING - This is my WARNING message 
+2024-10-01 17:36:48,465 - root - ERROR - This is my ERROR message 
+2024-10-01 17:36:48,467 - root - CRITICAL - This is my FAULT message 
+2024-10-01 17:36:53,653 - root - INFO - 
+<class 'nibabel.nifti1.Nifti1Image'>
+data shape (330, 264, 400)
+affine:
+[[  -1.           -0.            0.          154.0418396 ]
+ [  -0.            1.           -0.         -126.8928833 ]
+ [   0.            0.            1.         -309.40197754]
+ [   0.            0.            0.            1.        ]]
+metadata:
+<class 'nibabel.nifti1.Nifti1Header'> object, endian='<'
+sizeof_hdr      : 348
+data_type       : np.bytes_(b'')
+db_name         : np.bytes_(b'')
+extents         : 0
+session_error   : 0
+regular         : np.bytes_(b'r')
+dim_info        : 0
+dim             : [  3 330 264 400   1   1   1   1]
+intent_p1       : 0.0
+intent_p2       : 0.0
+intent_p3       : 0.0
+intent_code     : none
+datatype        : int16
+bitpix          : 16
+slice_start     : 0
+pixdim          : [-1.  1.  1.  1.  0.  0.  0.  0.]
+vox_offset      : 0.0
+scl_slope       : nan
+scl_inter       : nan
+slice_end       : 0
+slice_code      : unknown
+xyzt_units      : 10
+cal_max         : 0.0
+cal_min         : 0.0
+slice_duration  : 0.0
+toffset         : 0.0
+glmax           : 0
+glmin           : 0
+descrip         : np.bytes_(b'')
+aux_file        : np.bytes_(b'')
+qform_code      : scanner
+sform_code      : scanner
+quatern_b       : -0.0
+quatern_c       : 1.0
+quatern_d       : 0.0
+qoffset_x       : 154.04184
+qoffset_y       : -126.89288
+qoffset_z       : -309.40198
+srow_x          : [ -1.       -0.        0.      154.04184]
+srow_y          : [  -0.         1.        -0.      -126.89288]
+srow_z          : [   0.         0.         1.      -309.40198]
+intent_name     : np.bytes_(b'')
+magic           : np.bytes_(b'n+1')
+
+2024-10-01 17:37:26,881 - root - INFO - This is my CHECK message 
+2024-10-01 17:37:26,881 - root - WARNING - This is my WARNING message 
+2024-10-01 17:37:26,882 - root - ERROR - This is my ERROR message 
+2024-10-01 17:37:26,883 - root - CRITICAL - This is my FAULT message 
+2024-10-01 17:37:32,543 - root - INFO - 
+<class 'nibabel.nifti1.Nifti1Image'>
+data shape (330, 264, 400)
+affine:
+[[  -1.           -0.            0.          154.0418396 ]
+ [  -0.            1.           -0.         -126.8928833 ]
+ [   0.            0.            1.         -309.40197754]
+ [   0.            0.            0.            1.        ]]
+metadata:
+<class 'nibabel.nifti1.Nifti1Header'> object, endian='<'
+sizeof_hdr      : 348
+data_type       : np.bytes_(b'')
+db_name         : np.bytes_(b'')
+extents         : 0
+session_error   : 0
+regular         : np.bytes_(b'r')
+dim_info        : 0
+dim             : [  3 330 264 400   1   1   1   1]
+intent_p1       : 0.0
+intent_p2       : 0.0
+intent_p3       : 0.0
+intent_code     : none
+datatype        : int16
+bitpix          : 16
+slice_start     : 0
+pixdim          : [-1.  1.  1.  1.  0.  0.  0.  0.]
+vox_offset      : 0.0
+scl_slope       : nan
+scl_inter       : nan
+slice_end       : 0
+slice_code      : unknown
+xyzt_units      : 10
+cal_max         : 0.0
+cal_min         : 0.0
+slice_duration  : 0.0
+toffset         : 0.0
+glmax           : 0
+glmin           : 0
+descrip         : np.bytes_(b'')
+aux_file        : np.bytes_(b'')
+qform_code      : scanner
+sform_code      : scanner
+quatern_b       : -0.0
+quatern_c       : 1.0
+quatern_d       : 0.0
+qoffset_x       : 154.04184
+qoffset_y       : -126.89288
+qoffset_z       : -309.40198
+srow_x          : [ -1.       -0.        0.      154.04184]
+srow_y          : [  -0.         1.        -0.      -126.89288]
+srow_z          : [   0.         0.         1.      -309.40198]
+intent_name     : np.bytes_(b'')
+magic           : np.bytes_(b'n+1')
+
+2024-10-01 17:39:23,794 - root - INFO - This is my CHECK message 
+2024-10-01 17:39:23,796 - root - WARNING - This is my WARNING message 
+2024-10-01 17:39:23,797 - root - ERROR - This is my ERROR message 
+2024-10-01 17:39:23,797 - root - CRITICAL - This is my FAULT message 
+2024-10-01 17:39:28,892 - root - INFO - 
+<class 'nibabel.nifti1.Nifti1Image'>
+data shape (330, 264, 400)
+affine:
+[[  -1.           -0.            0.          154.0418396 ]
+ [  -0.            1.           -0.         -126.8928833 ]
+ [   0.            0.            1.         -309.40197754]
+ [   0.            0.            0.            1.        ]]
+metadata:
+<class 'nibabel.nifti1.Nifti1Header'> object, endian='<'
+sizeof_hdr      : 348
+data_type       : np.bytes_(b'')
+db_name         : np.bytes_(b'')
+extents         : 0
+session_error   : 0
+regular         : np.bytes_(b'r')
+dim_info        : 0
+dim             : [  3 330 264 400   1   1   1   1]
+intent_p1       : 0.0
+intent_p2       : 0.0
+intent_p3       : 0.0
+intent_code     : none
+datatype        : int16
+bitpix          : 16
+slice_start     : 0
+pixdim          : [-1.  1.  1.  1.  0.  0.  0.  0.]
+vox_offset      : 0.0
+scl_slope       : nan
+scl_inter       : nan
+slice_end       : 0
+slice_code      : unknown
+xyzt_units      : 10
+cal_max         : 0.0
+cal_min         : 0.0
+slice_duration  : 0.0
+toffset         : 0.0
+glmax           : 0
+glmin           : 0
+descrip         : np.bytes_(b'')
+aux_file        : np.bytes_(b'')
+qform_code      : scanner
+sform_code      : scanner
+quatern_b       : -0.0
+quatern_c       : 1.0
+quatern_d       : 0.0
+qoffset_x       : 154.04184
+qoffset_y       : -126.89288
+qoffset_z       : -309.40198
+srow_x          : [ -1.       -0.        0.      154.04184]
+srow_y          : [  -0.         1.        -0.      -126.89288]
+srow_z          : [   0.         0.         1.      -309.40198]
+intent_name     : np.bytes_(b'')
+magic           : np.bytes_(b'n+1')
+

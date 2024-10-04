@@ -5,6 +5,5 @@ This package provides a VolumeVisualizer class that can be used to visualize 3D 
 from .VolumeVisualizer import  *
 from .check_data import *
 from .process_utils import *
-from .roc import *
 
 __version__ = "1.1.2"

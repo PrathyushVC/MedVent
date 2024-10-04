@@ -8,7 +8,7 @@ from pathlib import Path
 import SimpleITK as sitk
 from skimage.measure  import find_contours
 from tqdm import tqdm
-from check_data import check_meta
+from .check_data import check_meta
 import seaborn as sns
 import warnings
 
@@ -163,7 +163,7 @@ def resample_patient_data(df,volume_resampled_path,mask_resampled_path,resample_
           except Exception as e:
               print(f"\generating paths for patient {patient_id}: {e}")
 
-def BFC_with_mask(input_image_path, output_image_path, mask_image_path=None, threshold_method='li', bins=200, shrink_factor=4,check_params=False):
+def BFC_with_mask(input_image_path, output_image_path, mask_image_path=None, threshold_method='li', bins=200, shrink_factor=1,check_params=False):
     """
     Applies N4ITK Bias Field Correction to an MRI image with an optional mask.
 
@@ -189,7 +189,9 @@ def BFC_with_mask(input_image_path, output_image_path, mask_image_path=None, thr
 
         if shrink_factor > 1:
             print(f"Applying shrink factor of {shrink_factor} before thresholding...")
-            input_image_float32 = sitk.Shrink(input_image_float32, [shrink_factor] * input_image_float32.GetDimension())
+            shrunk_image = sitk.Shrink(input_image_float32, [shrink_factor] * input_image_float32.GetDimension())
+        else:
+            shrunk_image=input_image_float32# for variable name clarity
 
 
         if mask_image_path:
@@ -199,21 +201,29 @@ def BFC_with_mask(input_image_path, output_image_path, mask_image_path=None, thr
 
             if threshold_method.lower() == 'otsu':
                 print("Creating mask using Otsu thresholding...")
-                mask_image = sitk.OtsuThreshold(input_image_float32, 0, 1, bins)
+                mask_image = sitk.OtsuThreshold(shrunk_image, 0, 1, bins)
             elif threshold_method.lower() == 'li':
                 print("Creating mask using Li thresholding...")
-                mask_image = sitk.LiThreshold(input_image_float32, 0, 1)
+                mask_image = sitk.LiThreshold(shrunk_image, 0, 1)
             else:
                 raise ValueError("Unsupported threshold method. Choose 'otsu' or 'li'.")
-
+        if shrink_factor > 1:
+            print("Rescaling mask back to original size and matching size with input image...")
+            mask_image = sitk.Expand(mask_image, [shrink_factor] * mask_image.GetDimension())
+            mask_image.SetSpacing(input_image_float32.GetSpacing())
+            mask_image.SetOrigin(input_image_float32.GetOrigin())
+            mask_image.SetDirection(input_image_float32.GetDirection())
+            mask_image = sitk.Resample(mask_image, input_image_float32, sitk.Transform(), sitk.sitkNearestNeighbor, input_image_float32.GetOrigin(), input_image_float32.GetSpacing(), input_image_float32.GetDirection(), 0, mask_image.GetPixelID())
 
         print("Performing N4ITK Bias Field Correction...")
+        
         corrector = sitk.N4BiasFieldCorrectionImageFilter()
         corrected_image = corrector.Execute(input_image_float32, mask_image)
 
 
         print(f"Saving corrected image to {output_image_path}...")
         sitk.WriteImage(corrected_image, output_image_path)
+
 
         print("Bias field correction completed successfully.")
         meta_input=check_meta(input_image)
