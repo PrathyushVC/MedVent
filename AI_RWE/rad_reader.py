@@ -101,14 +101,15 @@ def stat_comp(before_col, after_col, target_col, dataframe,parametric='All'):
 
 
     if parametric.lower()=='true':
-        results.append(_parametric_stats(before,after,target))
+        
+        results.update(_parametric_stats(before,after,target))
 
     elif parametric.lower()== 'false':
-        results.append(_non_parametric_stats(before,after,target))
+        results.update(_non_parametric_stats(before,after,target))
 
     elif parametric.lower()=='all':
-        results.append(_parametric_stats(before,after,target))
-        results.append(_non_parametric_stats(before,after,target))
+        results.update(_parametric_stats(before,after,target))
+        results.update(_non_parametric_stats(before,after,target))
 
     else:
         raise ValueError(f'Parametric must be one of the three options all, true, false.')
