@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from scipy.stats import pearsonr,spearmanr,ttest_rel,wilcoxon
 import matplotlib.pyplot as plt
+from sklearn.metrics import roc_auc_score
 
 
 
@@ -75,6 +76,31 @@ def scatter_with_best_fit(column1, column2, dataframe, color=None):
     plt.show(block=False)
     #return plt
     return (spearman_corr,pearson_corr)
+
+def stepwise_rad_acc(rad_col,target_col,dataframe,threshold):
+   
+
+  
+    binary_target = (dataframe[target_col] >= threshold).astype(int)
+
+    accuracies = []
+    thresholds = range(0, 101, 10)  # Thresholds from 0 to 100 in steps of 10
+
+    for t in thresholds:
+        # Convert rad_col to binary based on the current threshold
+        binary_rad = (dataframe[rad_col] >= t).astype(int)  
+        accuracy = np.mean(binary_rad == binary_target)
+        accuracies.append([t,accuracy])
+
+    return accuracies
+
+def stepwise_rad_auc(rad_col,target_col,dataframe,threshold):
+    binary_target = (dataframe[target_col] >= threshold).astype(int)
+    accuracies = []
+    auc = roc_auc_score(binary_target, dataframe[rad_col]/100)
+    return auc
+
+
 
 def stat_comp(before_col, after_col, target_col, dataframe,parametric='All'):
     """

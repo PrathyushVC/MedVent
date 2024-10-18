@@ -6,6 +6,8 @@ from pathlib import Path
 import scipy.ndimage as ndi
 import SimpleITK as sitk
 import numpy as np
+import numpy as np
+from skimage.metrics import structural_similarity as ssim
 
 
 
@@ -176,3 +178,29 @@ def get_orientation(affine):
         return 'Coronal'
     else:
         return 'Unknown'
+    
+
+
+def calculate_metrics(original_image, compressed_image):
+    """
+    Calculates the Peak Signal-to-Noise Ratio (PSNR) and Structural Similarity Index (SSIM) 
+    between two images.
+
+    Parameters:
+    - original_image: numpy array.
+    - compressed_image: numpy array.
+
+    Returns:
+    - psnr: float, the PSNR value in decibels.
+    - ssim_value: float, the SSIM value between the two images.
+    """
+    mse = np.mean((original_image - compressed_image) ** 2)
+
+    if mse == 0:
+        psnr = float('inf')
+    else:
+        psnr = 10 * np.log10(255 ** 2 / mse)
+
+    ssim_value = ssim(original_image, compressed_image, data_range=compressed_image.max() - compressed_image.min())
+
+    return psnr, ssim_value
