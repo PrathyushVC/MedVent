@@ -75,7 +75,7 @@ def scatter_with_best_fit(column1, column2, dataframe, color=None):
     plt.grid(True)
     plt.show(block=False)
     #return plt
-    return (spearman_corr,pearson_corr)
+    return (plt,spearman_corr,pearson_corr)
 
 def stepwise_rad_acc(rad_col,target_col,dataframe,threshold):
    
